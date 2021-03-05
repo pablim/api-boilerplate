@@ -1,0 +1,23 @@
+type Query {
+    hello: String
+    service: [Servico]!
+}
+type Mutation {
+    addService (servico: ServicoInput): Servico!
+}
+input ServicoInput {
+    nome: String
+    data: String
+    kilometragem: Int
+    prestadorServico: String
+    preco: String
+}
+type Servico {
+    id: ID
+    nome: String
+    data: String
+    kilometragem: Int
+    prestadorServico: String
+    preco: String
+}
+
